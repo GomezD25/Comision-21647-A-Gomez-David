@@ -1,0 +1,53 @@
+<%- include("partials/head")%>
+<body>
+    <!--Header-->
+    <header>
+     <%- include("partials/navBar")%>
+    </header>
+    <!--Main-->
+    <main>
+      <div class="card mb-3">
+        <% result.forEach((posts)=>{%>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <div class="card-img-container">
+              <img src="<%= posts.image%>" class="img-fluid fixed-image" alt="...">
+            
+             <h5 class="titulo-foto"><%= posts.username%></h5>
+            </div>
+             
+                   
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <div class="card-title-container">
+                
+                <h5 class="card-title"><%= posts.tituloTema%></h5>
+              </div>
+              <div class="card-text-container">
+               
+                <p class="card-text"><%= posts.posteo%></p>
+               
+              </div>
+              <div class="botones">
+                
+                <a href="/deletePost/<%=posts.id%>" class="btn btn-danger mx-2 float-end " >Eliminar</a>
+                
+                <a href="/EditPost/<%= posts.id %>" class="btn btn-primary float-end">Editar</a>
+              </div>
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <%})%>
+
+    </main>
+    <div class="boton-T-Nuevo">
+        <a href="/nuevopost" class="btn btn-secondary floating-button">Tema Nuevo</a>
+    </div>
+  <%- include("partials/footer")%>
+</body>
+</html>    
+

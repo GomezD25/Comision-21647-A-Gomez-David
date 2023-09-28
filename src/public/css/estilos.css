@@ -1,0 +1,115 @@
+/* Estilos CSS personalizados */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    margin: 0;
+}
+/*Main*/
+main {
+    flex-grow: 1; 
+    background-color: #333; 
+    color: #fff; 
+    padding: 20px; 
+    z-index: 1; 
+    position: relative; 
+}
+/*Card*/
+
+
+    
+
+.card {
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: #333; 
+    color: #fff; 
+    margin-bottom: 20px; 
+}
+.fixed-image {
+    width: 200px; 
+    height: 150px; 
+    object-fit: cover; 
+}
+
+.card-img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-title-container {
+    background-color: #0074d9; 
+    color: #fff; 
+    padding: 10px;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.card-text-container {
+    padding: 10px;
+}
+
+.card-footer-container {
+    background-color: #444; 
+    padding: 10px;
+    border-top: 1px solid #555; 
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    z-index: 2; /* Asegura que el header esté en el primer plano */
+    position: relative; /* Establece la posición relativa para el header */
+}
+
+/* Estilo Foto Index */
+.overlay-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo casi transparente */
+    color: #b7d43fb7;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease; /* Transición suave para el color del texto */
+}
+
+.overlay-text:hover {
+    color: #0074d9; /* Cambia el color del texto cuando se pasa el puntero */
+}
+/*Boton Tema nuevo*/
+.boton-T-Nuevo {
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior de la pantalla */
+    right: 20px; /* Distancia desde la derecha de la pantalla */
+    z-index: 1001; /* Asegura que el contenedor esté en la parte superior */
+}
+
+/* Estilo para el botón */
+.floating-button {
+    display: block;
+    padding: 10px 10px;
+    background-color: #0074d9; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1002;
+}
+/*Footer*/
+footer {
+    background-color: #0c2438; /* Fondo azul para el footer */
+    color: #fff; /* Color del texto del footer */
+    padding: 2px;
+    text-align: center;
+    position: flex;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+

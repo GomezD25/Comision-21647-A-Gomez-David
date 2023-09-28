@@ -1,0 +1,66 @@
+<%- include("partials/head")%>
+<body>
+    <header>
+        <%- include("partials/navBar")%>
+       </header>
+       <main>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header">
+                    Formulario de Tema
+                </div>
+                <div class="card-body">
+                    <form action="/savePost" method="post">
+                        <div class="form-group">
+                           
+                            <label for="post">Usuario</label>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Ingrese su usuario" required>
+                        </div>
+                        <div class="form-group">
+                           
+                            <label for="post">Enlace de la Imagen</label>
+                            <input type="text" class="form-control" id="image" name="image" placeholder="Ingrese el enlace de la imagen" required>
+                            <img src="" alt="Vista previa de la imagen" id="imagenPreview" class="mt-2 img-thumbnail" style="max-width: 100px;">
+                        </div>
+                        <div class="form-group">
+                           
+                            <label for="post" label>>Título del Tema</label>
+                            <input type="text" class="form-control" id="tituloTema" name="tituloTema" placeholder="Ingrese el título del tema" required>
+                        </div>
+                        <div class="form-group">
+                            
+                            <label for="post">Texto</label>
+                            <textarea class="form-control" id="posteo" name="posteo" rows="4" placeholder="Ingrese el texto del tema" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        
+                        <a href="/post" class="btn btn-danger" >Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+                        
+            
+       </main>
+    
+  <%- include("partials/footer")%>
+  <script>
+   // Función para actualizar la vista previa de la imagen
+document.getElementById('image').addEventListener('input', function() {
+    var imageUrl = this.value;
+    var imagenPreview = document.getElementById('imagenPreview');
+    
+    if (imageUrl.trim() === '') {
+        // Si el campo está vacío, ocultar la vista previa de la imagen
+        imagenPreview.style.display = 'none';
+    } else {
+        // Si se ingresó un enlace, mostrar la vista previa de la imagen
+        imagenPreview.style.display = 'block';
+        imagenPreview.src = imageUrl;
+    }
+});
+</script>
+  
+</body>
+</html>    
